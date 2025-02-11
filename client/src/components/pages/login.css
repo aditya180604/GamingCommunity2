@@ -1,0 +1,126 @@
+/* Full-page background with a cyberpunk gaming theme */
+body {
+  background: url('/public/background.jpg') no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Semi-transparent neon glowing form container */
+.login-container, .signup-container {
+  background: rgba(20, 20, 40, 0.95);
+  box-shadow: 0px 0px 20px #00f3ff;
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated glowing border effect */
+.login-container::before, .signup-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff00ff, #00f3ff, #ff00ff);
+  z-index: -1;
+  filter: blur(20px);
+  animation: neon-border 3s infinite alternate;
+}
+
+/* Neon border animation */
+@keyframes neon-border {
+  0% { filter: blur(10px); opacity: 0.8; }
+  100% { filter: blur(20px); opacity: 1; }
+}
+
+/* Title with a neon glow effect */
+h2 {
+  font-size: 2rem;
+  color: #00f3ff;
+  text-shadow: 0px 0px 15px #00f3ff;
+}
+
+/* Input fields with a glowing effect */
+input {
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+input:focus {
+  border-color: #ff00ff;
+  box-shadow: 0px 0px 10px #ff00ff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Neon gradient button */
+button {
+  font-size: 1.2rem;
+  padding: 12px;
+  background: linear-gradient(90deg, #00f3ff, #ff00ff);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: 0px 0px 15px rgba(0, 243, 255, 0.5);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff00ff, #00f3ff);
+  box-shadow: 0px 0px 20px #ff00ff;
+  transform: scale(1.05);
+}
+
+/* Futuristic hover animation */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Links with glowing effect */
+a {
+  color: #00f3ff;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ff00ff;
+  text-decoration: underline;
+  text-shadow: 0px 0px 10px #ff00ff;
+}
+
+/* Subtle floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.login-container, .signup-container {
+  animation: float 3s infinite ease-in-out;
+}

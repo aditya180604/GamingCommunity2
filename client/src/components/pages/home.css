@@ -1,0 +1,143 @@
+/* General Styles */
+.home-container {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  color: white;
+  min-height: 100vh;
+}
+
+.hero-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #72514e, #ff4a3d);
+  color: white;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.highlight {
+  color: #ffd700; /* Gold color for highlights */
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 20px;
+  margin: 40px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ff6f61;
+}
+
+/* Grid Layouts */
+.games-grid, .news-grid, .events-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.game-card, .news-card, .event-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 30%;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.game-card:hover, .news-card:hover, .event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 111, 97, 0.4);
+}
+
+.game-card img, .news-card img, .event-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.game-card h3, .news-card h3, .event-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.game-card p, .news-card p, .event-card p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Buttons */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #ff6f61, #ff4a3d);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(135deg, #665958, #221f1f);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .games-grid, .news-grid, .events-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-card, .news-card, .event-card {
+    width: 80%;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+}
